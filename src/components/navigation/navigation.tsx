@@ -3,6 +3,7 @@ import Box from "@mui/material/Box";
 import { navigations } from "./navigation.data";
 import { Link } from "@mui/material";
 import { useLocation } from "react-router-dom";
+import ConnectButton from "../wallet/ConnectButton";
 
 type NavigationData = {
   path: string;
@@ -66,26 +67,14 @@ const Navigation: FC = () => {
       )}
       <Box
         sx={{
-          position: "relative",
-          color: "white",
-          cursor: "pointer",
-          textDecoration: "none",
-          textTransform: "uppercase",
-          fontWeight: 600,
           display: "inline-flex",
           alignItems: "center",
           justifyContent: "center",
           px: { xs: 0, lg: 3 },
-          mb: { xs: 3, lg: 0 },
-          fontSize: "24px",
-          lineHeight: "6px",
-          width: "324px",
-          height: "45px",
-          borderRadius: "6px",
-          backgroundColor: "#00dbe3"
+          mb: { xs: 3, lg: 0 }
         }}
       >
-        Connect Wallet
+        <ConnectButton />
       </Box>
     </Box>
   );
